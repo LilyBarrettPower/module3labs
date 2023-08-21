@@ -41,5 +41,71 @@ function truncate(str, max) {
 }
 // truncate a string using the conditional operator 
 
-console.log(trun("I love JavaScript!", 5))
-console.log(truncate("Hello my name is Lily", 10))
+console.log(trun("I love JavaScript!", 5));
+console.log(truncate("Hello my name is Lily", 10));
+
+// QUESTION 3 
+const animals = ['Tiger', 'Giraffe']
+console.log(animals);
+
+// a - add 2 new values to the end 
+animals.push('Horse', 'Banshee');
+console.log(animals);
+
+// b - add 2 values to the beginning of the array 
+animals.unshift('Goat', 'Pig');
+console.log(animals);
+
+// c - sort the array alphabetically
+animals.sort();
+console.log(animals);
+
+// d - create a function to replace the middle animal
+ function replaceMiddleAnimal(newValue) {
+    if (animals.length % 2 == 0) {
+        console.log("Cannot find middle animal");
+        return;
+        // Create a fall back so that if there is no "middle animal" the function will return an error statement
+    } else {
+     const middleIndex = Math.floor(animals.length / 2);
+     animals[middleIndex] = newValue;
+    }
+    // If there is a middle animal the function will replace that animal.
+}
+    // Create the function to replace the middle animal with a new value
+
+replaceMiddleAnimal('Crocodile');
+// call the function, error message returned as there is no middle animal 
+
+animals.push('Elephant');
+// Added a new value so that there is a middle animal 
+replaceMiddleAnimal('Crocodile');
+console.log(animals);
+// log the array with the middle animal replaced with crocodile
+
+
+// e - Create a function to return an array that contains all beginsWith elements 
+function findMatchingAnimals(beginsWith) {
+    beginsWith = beginsWith.toLowerCase();
+    // Convert to lowercase
+    const matchingAnimals = [];
+    // Create an empty array which stores the animals names that meet the criteria 
+    for (const animal of animals) {
+        // Loop that iterates over each animal in the array animals 
+        if (animal.toLowerCase().startsWith(beginsWith)) {
+            // Adding toLowerCase to convert the animal and begins with to lowercase so the function is case insenstive
+            matchingAnimals.push(animal);
+        }
+        // Checks if the current animal name starts with the "beginsWith" string 
+        // if it does, the animals name is added to the matchingAnimals array
+    }
+    return matchingAnimals;
+}
+
+const startsWithG = findMatchingAnimals("G");
+console.log(startsWithG);
+// Call and log the findMatchingAnimals function 
+
+const startsWithp = findMatchingAnimals("p");
+console.log(startsWithp);
+// Call thhe function using the case insensitivity
