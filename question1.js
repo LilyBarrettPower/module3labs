@@ -251,5 +251,8 @@ function currencyOperation(float1, float2, operation, numDecimals) { //added the
 console.log(0.3 == currencyAddition(0.1, 0.2));
 console.log(0.3 == currencyOperation(0.1, 0.2, '+', 2));
 console.log(currencyOperation(0.5,0.5,'*', 9));
+console.log(currencyOperation(0.6, 0, '/', 9)); // error - division by 0 
+console.log(currencyOperation(0.6, 0.9, '/', 12)); // error - decimals must be between 1 and 10 
+
 
 
