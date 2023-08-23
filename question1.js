@@ -411,3 +411,52 @@ console.log(topEarner(salaries));
 
 // QUESTION 10 
 
+const today = new Date();
+console.log('Current time is ' + today.toLocaleTimeString())
+console.log(today.getHours() + ' hours have passed so far today')
+// a - Print the total number of minutes that have passed today
+const totalMinutesPassed = today.getHours() * 60 + today.getMinutes();
+console.log('Total minutes passed today: ' + totalMinutesPassed);
+// need to add getHours otherwise it just prints the amount of miinutes that have passed since the last hour 
+// b - print the total number of seconds that have passed today 
+const totalSecondsPassed = totalMinutesPassed * 60 + today.getSeconds();
+// Used the previous function totalMinutesPassed to get the total minutes *60 = total seconds before THIS hour 
+console.log('Total seconds passed today: ' + totalSecondsPassed);
+
+// c - calculate and print your age 
+const birthDate = new Date('2000-04-14');
+//  create a date object for my birthday 
+
+const years = today.getFullYear() - birthDate.getFullYear();
+const months = today.getMonth() - birthDate.getMonth();
+const days = today.getDate() - birthDate.getDate();
+// calculating the difference between todays date and my birthdate, adding these to variables 
+
+if (months < 0 || (months === 0 && days <0)) {
+    years--; //This accounts for if the birthdate hasnt happened yet this year 
+    // if the true, one year will be subtracted 
+    // -- is a decrement value, subtracts one from the value 
+}
+if (months < 0) {
+    months += 12;
+    // Checks if the birthday has happened this year, if true, adds 12 to the month output 
+}
+if (days < 0) {
+    const lastMonth = new Date(today.getFullYear(), today.getMonth() -1, birthDate.getDate());
+    days += (today - lastMonth) / (24 * 60 * 60 * 1000);
+    months --;
+    // checks the birthday has happned this day, if true it will calculate the number of days remaining in the previous month 
+    //  and subtract one months difference from it 
+}
+
+console.log(`I am ${years} years, ${months} months and ${days} days old.`);
+
+// d - create a function that returns the difference between two dates 
+function daysInBetween(date1, date2) {
+    return ((date2 - date1) / (24 * 60 * 60 * 1000));
+    // need to divide by milliseconds per day as all dates are stored in JS as milliseconds 
+}
+
+dateA = new Date ('2023-04-12');
+dateB = new Date ('2023-04-15')
+console.log(daysInBetween(dateA, dateB));
