@@ -333,11 +333,14 @@ function latestBook() {
 //     // create an empty array 
     books.forEach(book => {
         if (book.year > latest.year) {
-            latest = book;
+            latest = book.year;
             // if the book year is larger than the latest year the "latest" is that book
+            // dont really need to use .find???
+
         }
     });
-    return latest;
+    return books.find(({ year }) => year == latest);
+    // use.find to find the book with the latest year
 }
 console.log(latestBook(books));
 
