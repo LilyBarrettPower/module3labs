@@ -328,13 +328,19 @@ const titleInitial = getTitles('A');
 console.log(titleInitial);
 
 // e - use find and foreach to find the book with the most recent publication date 
-// function latestBook() {
-//     const bookDate = books[0];
+function latestBook() {
+    let latest = books[0];
 //     // create an empty array 
-//     books.forEach(book => {
-//         books.find(books => book.year )
-//     })
-// }
+    books.forEach(book => {
+        if (book.year > latest.year) {
+            latest = book;
+            // if the book year is larger than the latest year the "latest" is that book
+        }
+    });
+    return latest;
+}
+console.log(latestBook(books));
+
 
 // QUESTION 8 
 const phoneBookABC = new Map() //an empty map to begin with
