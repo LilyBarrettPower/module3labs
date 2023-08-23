@@ -368,3 +368,46 @@ for (const name of phoneBookABCDEF.keys()) {
     // .keys returns an iterable for the keys 
     console.log(name);
 }
+
+// QUESTION 9 
+let salaries = {
+    "Timothy" : 35000,
+    "David" : 25000,
+    "Mary" : 55000,
+    "Christina" : 75000,
+    "James" : 43000
+    };
+
+// a - write a function that calculates and returns the total salaries 
+function salariesSum(salaries) {
+    let total = 0;
+    // create the variable to store the sum, starts at 0
+    for (const name in salaries) {
+        // iterate through the keys and add the corresponding salaries
+        total +=salaries[name];
+    } 
+    return total;
+}
+
+console.log(salariesSum(salaries));
+
+// b - write a function that calculates and returns the name of the top earner 
+function topEarner(salaries) {
+    let highestSalary = 0;
+    let topEarnerName = null;
+    // create the empty variables 
+    for (const name in salaries) {
+        if(salaries[name] > highestSalary) {
+            highestSalary = salaries[name];
+            topEarnerName = name;
+        }
+        // use a for...in loop to iterate over the salaries and compare them
+        // the name of the person with the highest salary will be returned 
+    }
+    return topEarnerName;
+}
+
+console.log(topEarner(salaries));
+
+// QUESTION 10 
+
