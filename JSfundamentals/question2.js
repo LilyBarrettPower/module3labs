@@ -10,6 +10,7 @@ let addition = three + four
         let addition2 = Number(three) + Number(four);    
         console.log(addition2);
     // this will convert the strings in three and four to their number counterparts 
+    // you could also use parseInt to convert the strings to intergers 
 
 console.log(addition)
 
