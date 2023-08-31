@@ -6,7 +6,10 @@ let thirty = "30"
 let addition = three + four
 // This will return "34" because the 3 and 4 will be treated as strings 
 // To fix this you could make it so that three and four are not strings (remove quotes)
-// You could explicitly convert them to numbers using Number class function
+// You could explicitly convert them to numbers using Number class function:
+        let addition2 = Number(three) + Number(four);    
+        console.log(addition2);
+    // this will convert the strings in three and four to their number counterparts 
 
 console.log(addition)
 
@@ -25,4 +28,12 @@ console.log(lessThan1)
 
 let lessThan2 = thirty < four
 // Will return true becayse F is higher than T in the alphabet
+// Again, could remove the quotes in the variables to make them numbers OR use Number class function 
 console.log(lessThan2)
+
+    let lessThan3 = Number(thirty) < Number(four);
+    console.log(lessThan3);
+    //this will return false as lessThan3 has converted the strings to numbers 
+
+
+
