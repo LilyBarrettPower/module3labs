@@ -12,14 +12,14 @@ console.log(getGreeting("Lily"))
 // function expression syntax:
 
 const greeting = function(name) {
-    return 'Hello' + name + "!";
+    return 'Hello ' + name + "!";
 }
 
 console.log(greeting("Lily"))
 
 // Arrow function syntax 
 
-const greetingAgain = (name) => {return 'Hello' + name + "!"};
+const greetingAgain = (name) => {return 'Hello ' + name + "!"};
 // Print the return to the console 
 console.log(greetingAgain("Lily"))
 

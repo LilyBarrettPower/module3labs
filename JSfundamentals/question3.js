@@ -4,7 +4,7 @@ if ("0") console.log('#2 zero is true')
 if (null) console.log('null is true')
 if (-1) console.log('negative is true')
 if (1) console.log('positive is true')
-// if specifies a block of code is a condition is true 
+// if specifies a block of code if a condition is true 
 // Non empty strings are evaluated as true 
 // numbers that are not zero are evaluated as true
 // 0 and null are evaluated as false 
