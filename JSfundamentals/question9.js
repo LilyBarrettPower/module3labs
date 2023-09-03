@@ -13,7 +13,7 @@ console.log(moreSports)
 
 let dog = dog1;
 // Create a shallow copy of the string
-let dog2 = dog1 + "Mary";
+let dog2 = dog1 + ' ' + "Mary";
 // concatenate the new value to the end of the string
 console.log(dog2)
 
