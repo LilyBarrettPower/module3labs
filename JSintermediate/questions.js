@@ -3,10 +3,10 @@
 // different strings.
 
 // QUESTION 1:
-let str = "lily barrett power";
+// let str = "lily barrett power";
 
-function capital() {
-arr = str.split(" ");
+function capital(str) {
+const arr = str.split(" ");
 // Split the string into an array of words so the words can be manipulated individually
 for (let i = 0; i < arr.length; i++) {
     arr[i] = arr[i][0].toUpperCase() + arr[i].substr(1);
@@ -17,8 +17,10 @@ for (let i = 0; i < arr.length; i++) {
 }
 // Join the array of words back into a string 
 
-console.log(capital(str))
+console.log(capital("this is my input"))
 // Log the final capitilised string 
+
+
 
 // QUESTION 2 
 // Create a function truncate(str, max) that truncates a given string of text if its total
@@ -469,3 +471,4 @@ function daysInBetween(date1, date2) {
 dateA = new Date ('2023-04-12');
 dateB = new Date ('2023-04-15')
 console.log(daysInBetween(dateA, dateB));
+
